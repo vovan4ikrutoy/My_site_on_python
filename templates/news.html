@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="text-align: center">
+  {% for item in news %}
+  <div style="text-align: center" class="container">
+    <div class="row">
+    <h1>Название: {{ item.title }}</h1>
+    <h6>Автор новости: {{ item.user_name.name }}</h6>
+    <h4>{{ item.text }}</h4>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

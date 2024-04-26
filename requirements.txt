@@ -1,0 +1,9 @@
+SQLAlchemy
+Flask
+requests
+WTForms
+pillow
+Werkzeug
+Flask-WTF
+flask-login
+SQLAlchemy-serializer

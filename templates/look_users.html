@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+    <h1>Пользователи</h1>
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>Имя</td>
+                <td>Почта</td>
+                <td>Админ?</td>
+            </tr>
+        </thead>
+        {% for item in users %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.email }}</td>
+            {% if item.is_admin %}
+            <td>Да</td>
+            {% else %}
+            <td>Нет</td>
+            {% endif %}
+                    </tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}

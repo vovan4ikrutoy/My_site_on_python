@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+    <h1>Добавить фотографию</h1>
+    <form class="login_form" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="photo">Приложите фотографию</label>
+          <input type="file" class="form-control-file" id="photo" name="file">
+        </div>
+        <h5>В базе данных находится {{ count }} изображения.</h5>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+    </div>
+{% endblock %}

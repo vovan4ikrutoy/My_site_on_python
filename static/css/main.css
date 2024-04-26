@@ -1,0 +1,22 @@
+.navbar {
+  background-color: #75c1ff;
+  margin-bottom: 10px;
+}
+
+.container {
+    width: 720px;
+    padding-bottom: 15px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.row {
+border-width: 1px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin: 1rem -0.75rem 0;
+    border: solid #dee2e6;
+}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+    <h1>Активные заявки</h1>
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>Пользователь</td>
+                <td>Телефон</td>
+                <td>Описание</td>
+                <td>Актуально до</td>
+            </tr>
+        </thead>
+        {% for item in talons %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.user_name.name }}</td>
+            <td>{{ item.number }}</td>
+            <td>{{ item.desc }}</td>
+            <td>{{ item.actuality }}</td>
+                    </tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}

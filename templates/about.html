@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="text-align: center">
+    <div class="row">
+        <div class="col-6">
+            <h4>
+            Мы занимаемся проффесиональной видеосъемкой уже 15 лет. Снимаем свадьбы, мероприятия,
+        утренники, выпускные и тд. Ещё много интересного текста..</h4>
+            <h5>Наш офис находится по адресу:</h5>
+            <img src={{ url_for('static', filename = 'img/other/map.jpeg') }} />
+        </div>
+        <div class="col-6">
+            <img src={{ url_for('static', filename = 'img/other/andrey.jpg') }} />
+        </div>
+    </div>
+</div>
+{% endblock %}

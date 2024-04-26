@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Авторизация</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label }}<br>
+            {{ form.name(class="form-control", type="text") }}<br>
+            {% for error in form.name.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.number.label }}<br>
+            {{ form.number(class="form-control", type="tel") }}<br>
+            {% for error in form.number.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.desc.label }}<br>
+            {{ form.desc(class="form-control", type="text") }}<br>
+            {% for error in form.desc.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.actuality.label }}<br>
+            {{ form.actuality(class="form-control", type="date") }}<br>
+            {% for error in form.actuality.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+                {% for error in errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error }}
+</div>
+        {% endfor %}
+        {% for good in goods %}
+                    <div class="alert alert-success" role="alert">
+                        {{ good }}
+</div>
+        {% endfor %}
+    </form>
+    </div>
+{% endblock %}
